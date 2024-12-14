@@ -258,6 +258,270 @@ const SideBar = () => {
             icon={<WavesOutlined />}
           /> */}
         </Menu>
+        <Typography
+          variant="h6"
+          color={colors.gray[300]}
+          sx={{ m: "15px 0 5px 20px" }}
+        >
+          {!collapsed ? "Business" : " "}
+        </Typography>
+        <Menu
+          menuItemStyles={{
+            button: {
+              ":hover": {
+                color: "#868dfb",
+                background: "transparent",
+                transition: ".4s ease",
+              },
+            },
+          }}
+        > 
+          <Item
+            title="Accounts"
+            path="/accounts"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Clients"
+            path="/clients"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Contracts"
+            path="/contrats"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Expenses"
+            path="/expenses"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Finance"
+            path="/finance"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Inventory"
+            path="/inventory"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Projects"
+            path="/projects"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Vendors"
+            path="/vendors"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+        </Menu>
+        <Typography
+          variant="h6"
+          color={colors.gray[300]}
+          sx={{ m: "15px 0 5px 20px" }}
+        >
+          {!collapsed ? "Analytics" : " "}
+        </Typography>
+        <Menu
+          menuItemStyles={{
+            button: {
+              ":hover": {
+                color: "#868dfb",
+                background: "transparent",
+                transition: ".4s ease",
+              },
+            },
+          }}
+        > 
+          <Item
+            title="Reports"
+            path="/reports"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Metrics"
+            path="/metrics"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+        </Menu>
+        <Typography
+          variant="h6"
+          color={colors.gray[300]}
+          sx={{ m: "15px 0 5px 20px" }}
+        >
+          {!collapsed ? "Marketing" : " "}
+        </Typography>
+        <Menu
+          menuItemStyles={{
+            button: {
+              ":hover": {
+                color: "#868dfb",
+                background: "transparent",
+                transition: ".4s ease",
+              },
+            },
+          }}
+        > 
+          <Item
+            title="Leads"
+            path="/leads"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Automation"
+            path="/automation"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Web Leads"
+            path="/web-leads"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+        </Menu>
+        <Typography
+          variant="h6"
+          color={colors.gray[300]}
+          sx={{ m: "15px 0 5px 20px" }}
+        >
+          {!collapsed ? "Communication" : " "}
+        </Typography>
+        <Menu
+          menuItemStyles={{
+            button: {
+              ":hover": {
+                color: "#868dfb",
+                background: "transparent",
+                transition: ".4s ease",
+              },
+            },
+          }}
+        > 
+          <Item
+            title="Messaging"
+            path="/messaging"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Notifications"
+            path="/notifications"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Team"
+            path="/teams"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+        </Menu>
+        <Typography
+          variant="h6"
+          color={colors.gray[300]}
+          sx={{ m: "15px 0 5px 20px" }}
+        >
+          {!collapsed ? "Tools" : " "}
+        </Typography>
+        <Menu
+          menuItemStyles={{
+            button: {
+              ":hover": {
+                color: "#868dfb",
+                background: "transparent",
+                transition: ".4s ease",
+              },
+            },
+          }}
+        > 
+          <Item
+            title="Payments"
+            path="/payments"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Calendar"
+            path="/calendar"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Documents"
+            path="/documents"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="HR"
+            path="/hr"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Settings"
+            path="/settings"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+        </Menu>
+        <Typography
+          variant="h6"
+          color={colors.gray[300]}
+          sx={{ m: "15px 0 5px 20px" }}
+        >
+          {!collapsed ? "Support" : " "}
+        </Typography>
+        <Menu
+          menuItemStyles={{
+            button: {
+              ":hover": {
+                color: "#868dfb",
+                background: "transparent",
+                transition: ".4s ease",
+              },
+            },
+          }}
+        > 
+          <Item
+            title="Helpdesk"
+            path="/helpdesk"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Integrations"
+            path="/integrations"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Activity Logs"
+            path="/activity-logs"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          /> 
+          <Item
+            title="Workflows"
+            path="/workflows"
+            colors={colors}
+            icon={<DonutLargeOutlined />}
+          />  
+        </Menu>
       </Box>
     </Sidebar>
   );

@@ -3,36 +3,53 @@ import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import { Navbar, SideBar } from "./scenes";
 import { Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const ToggledContext = createContext(null);
+
 
 function App() {
   const [theme, colorMode] = useMode();
   const [toggled, setToggled] = useState(false);
   const values = { toggled, setToggled };
-  
+
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/login"; // Adjust the path as per your routing
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ToggledContext.Provider value={values}>
-          <Box sx={{ display: "flex", height: "100vh", maxWidth: "100%" }}>
-            <SideBar />
+          {isLoginPage ? (
             <Box
               sx={{
-                flexGrow: 1,
                 display: "flex",
-                flexDirection: "column",
-                height: "100%",
-                maxWidth: "100%",
+                height: "100vh",
+                width: "100vw", // Ensure it spans the full viewport
               }}
             >
-              <Navbar />
-              <Box sx={{ overflowY: "auto", flex: 1, maxWidth: "100%" }}>
-                <Outlet />
+              <Outlet /> {/* This should render your Login page */}
+            </Box>
+          ) : (
+            <Box sx={{ display: "flex", height: "100vh", maxWidth: "100%" }}>
+              <SideBar />
+              <Box
+                sx={{
+                  flexGrow: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                  maxWidth: "100%",
+                }}
+              >
+                <Navbar />
+                <Box sx={{ overflowY: "auto", flex: 1, maxWidth: "100%" }}>
+                  <Outlet />
+                </Box>
               </Box>
             </Box>
-          </Box>
+          )}
         </ToggledContext.Provider>
       </ThemeProvider>
     </ColorModeContext.Provider>
